@@ -21,4 +21,10 @@ describe('<Main />', () => {
 
     expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
   })
+
+  it('should render with display flex', () => {
+    const { container } = render(<Main />)
+
+    expect(container.firstChild).toHaveStyleRule('display', 'flex')
+  })
 })
